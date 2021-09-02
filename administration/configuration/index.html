@@ -1,0 +1,324 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration files &mdash; The Bastion 3.04.00 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/thebastion.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="bastion.conf reference" href="bastion_conf.html" />
+    <link rel="prev" title="Administration" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> The Bastion
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                3.04.00
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../presentation/index.html">Presentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/index.html">Installation &amp; Setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../using/index.html">Using the bastion</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Administration</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html">bastion.conf reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-http-proxy_conf.html">osh-http-proxy.conf reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html">osh-encrypt-rsync.conf reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html">osh-backup-acl-keys.conf reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-piv-grace-reaper_conf.html">osh-piv-grace-reaper.conf reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html">osh-sync-watcher.sh reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../logs.html">Logs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../plugins/index.html">Bastion plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../faq.html">FAQ</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">The Bastion</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">Administration</a> &raquo;</li>
+        
+      <li>Configuration files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/administration/configuration/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration-files">
+<h1>Configuration files<a class="headerlink" href="#configuration-files" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="bastion_conf.html">bastion.conf reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="bastion_conf.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#main-options-options">Main Options options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#ssh-policies-options">SSH Policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#global-network-policies-options">Global network policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#logging-options">Logging options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-ingress-policies-options">Other ingress policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-egress-policies-options">Other egress policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#session-policies-options">Session policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#account-policies-options">Account policies options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-options-options">Other options options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="bastion_conf.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#main-options">Main Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#ssh-policies">SSH Policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#global-network-policies">Global network policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-ingress-policies">Other ingress policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-egress-policies">Other egress policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#session-policies">Session policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#account-policies">Account policies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bastion_conf.html#other-options">Other options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="osh-http-proxy_conf.html">osh-http-proxy.conf reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osh-http-proxy_conf.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-http-proxy_conf.html#http-proxy-configuration-options">HTTP Proxy configuration options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osh-http-proxy_conf.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-http-proxy_conf.html#http-proxy-configuration">HTTP Proxy configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="osh-encrypt-rsync_conf.html">osh-encrypt-rsync.conf reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osh-encrypt-rsync_conf.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#logging-options">Logging options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#encryption-and-signing-options">Encryption and signing options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#push-files-to-a-remote-destination-options">Push files to a remote destination options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osh-encrypt-rsync_conf.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#encryption-and-signing">Encryption and signing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-encrypt-rsync_conf.html#push-files-to-a-remote-destination">Push files to a remote destination</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="osh-backup-acl-keys_conf.html">osh-backup-acl-keys.conf reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osh-backup-acl-keys_conf.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#logging-options">Logging options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#backup-policy-options">Backup policy options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#remote-backup-options">Remote backup options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osh-backup-acl-keys_conf.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#backup-policy">Backup policy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-backup-acl-keys_conf.html#remote-backup">Remote backup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="osh-piv-grace-reaper_conf.html">osh-piv-grace-reaper.conf reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osh-piv-grace-reaper_conf.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-piv-grace-reaper_conf.html#logging-options">Logging options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osh-piv-grace-reaper_conf.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-piv-grace-reaper_conf.html#logging">Logging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="osh-sync-watcher_sh.html">osh-sync-watcher.sh reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="osh-sync-watcher_sh.html#option-list">Option List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#logging-options">Logging options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#daemon-setup-options">Daemon setup options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#remote-synchronization-options">Remote synchronization options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="osh-sync-watcher_sh.html#option-reference">Option Reference</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#logging">Logging</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#daemon-setup">Daemon setup</a></li>
+<li class="toctree-l3"><a class="reference internal" href="osh-sync-watcher_sh.html#remote-synchronization">Remote synchronization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="bastion_conf.html" class="btn btn-neutral float-right" title="bastion.conf reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral float-left" title="Administration" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2021, OVHcloud
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
